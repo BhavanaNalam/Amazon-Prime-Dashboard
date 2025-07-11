@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazon Prime Video Dashboard</title>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      #vizContainer {
+        width: 100%;
+        height: 100vh; /* Fill full screen */
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vizContainer"></div>
+
+    <script type="text/javascript">
+      const containerDiv = document.getElementById("vizContainer");
+      const vizUrl = "https://public.tableau.com/views/AmazonPrimeVideo_16851312846850/Dashboard1";
+      const options = {
+        hideTabs: true,
+        width: "100%",
+        height: "100%",
+      };
+
+      new tableau.Viz(containerDiv, vizUrl, options);
+    </script>
+  </body>
+</html>
